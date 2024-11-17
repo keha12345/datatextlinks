@@ -3,13 +3,13 @@
 
 <body>
   <div id="root">
-    <h1>One moment, you will be load!</h1>
+    <h1>One moment, it will be load!</h1>
   </div>
 </body>
 <script defer>
 const html = (new URLSearchParams(window.location.search)).get('h');
 if(!html) html = 'Error: Incorrect addres parameters!';
-document.getElementById('root').innerHtml = html;
+document.getElementById('root').innerHTML = html;
 </script>
 </html>
 
