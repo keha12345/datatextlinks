@@ -7,9 +7,11 @@
   </div>
 </body>
 <script defer>
-const html = (new URLSearchParams(window.location.search)).get('h');
-if(!html) html = 'Error: Incorrect addres parameters!';
-document.getElementById('root').innerHTML = html;
+  document.addEventListener("DOMContentLoaded", function() {
+    const html = (new URLSearchParams(window.location.search)).get('h');
+    if(!html) html = 'Error: Incorrect addres parameters!';
+    document.getElementById('root').innerHTML = html;
+  })
 </script>
 </html>
 
