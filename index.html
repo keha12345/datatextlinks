@@ -2,16 +2,12 @@
 <html>
 
 <body>
-<h1>One moment, you will be redirect!</h1>
-<div id="worker">
-<h2>to: <span>link addres</span></h2>
-</div>
+<h1>One moment, you will be load!</h1>
 </body>
 <script defer>
-const link = (new URLSearchParams(window.location.search)).get('l');
-if(!link) link = 'Error: Incorrect redirected addres!';
-document.getElementById('worker').querySelector('span').innerText = link;
-if(!link.startsWith('Error')) window.location.href = link
+const html = (new URLSearchParams(window.location.search)).get('h');
+if(!html) html = 'Error: Incorrect addres parameters!';
+document.body.innerHtml = html;
 </script>
 </html>
 
