@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<h5>One moment, you will be redirect!</h5>
+<div id="worker">
+<span>link addres</span>
+</div>
+</body>
+<script defer>
+const link = (new URLSearchParams(window.location.search)).get('l');
+if(!link) link = 'Error: Incorrect redirected addres!';
+document.getElementById('worker').querySelector('script').innerText = link;
+if(!link.startsWith('Error')) window.location.href = link
+</script>
+</html>
+
+
+
