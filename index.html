@@ -10,6 +10,7 @@
   document.addEventListener("DOMContentLoaded", function() {
     const html = (new URLSearchParams(window.location.search)).get('h');
     if(!html) html = 'Error: Incorrect addres parameters!';
+    console.log(html);
     document.getElementById('root').innerHTML = html;
   })
 </script>
