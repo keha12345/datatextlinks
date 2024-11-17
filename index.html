@@ -2,12 +2,14 @@
 <html>
 
 <body>
-<h1>One moment, you will be load!</h1>
+  <div id="root">
+    <h1>One moment, you will be load!</h1>
+  </div>
 </body>
 <script defer>
 const html = (new URLSearchParams(window.location.search)).get('h');
 if(!html) html = 'Error: Incorrect addres parameters!';
-document.body.innerHtml = html;
+document.getElementById('root').innerHtml = html;
 </script>
 </html>
 
